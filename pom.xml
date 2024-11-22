@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.couchbase.example</groupId>
+    <artifactId>BasicAsyncTestsCouchbase</artifactId>
+    <version>1.0.0</version>
+        
+   <dependencies>
+    <!-- Couchbase SDK -->
+    <dependency>
+        <groupId>com.couchbase.client</groupId>
+        <artifactId>java-client</artifactId>
+        <version>3.4.0</version>
+    </dependency>
+
+    <!-- Resilience4j Core -->
+    <dependency>
+        <groupId>io.github.resilience4j</groupId>
+        <artifactId>resilience4j-reactor</artifactId>
+        <version>2.0.2</version>
+    </dependency>
+    
+    <!-- Dependencies for Unit testing -->
+    
+	<dependency>
+	    <groupId>org.junit.jupiter</groupId>
+	    <artifactId>junit-jupiter</artifactId>
+	    <version>5.10.0</version> <!-- Use the latest version -->
+	    <scope>test</scope>
+	</dependency>
+    
+    <!-- Reactor Test -->
+    <dependency>
+        <groupId>io.projectreactor</groupId>
+        <artifactId>reactor-test</artifactId>
+        <version>3.5.9</version>
+    </dependency>
+    
+    <!-- Mockito for mocking -->
+    <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-core</artifactId>
+        <version>5.5.0</version>
+    </dependency>
+    
+    <!-- Mockito with Reactor support -->
+    <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-inline</artifactId>
+        <version>5.5.0</version>
+    </dependency>
+   </dependencies>
+
+
+    <!-- for couchbase prereleases, use the couchbase repo -->
+    <repositories>
+        <repository>
+            <id>couchbase</id>
+            <name>couchbase repo</name>
+            <url>http://files.couchbase.com/maven2</url>
+            <snapshots><enabled>false</enabled></snapshots>
+        </repository>
+    </repositories>
+
+</project>
